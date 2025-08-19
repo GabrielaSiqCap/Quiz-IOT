@@ -6,7 +6,7 @@ let client; //variável globalpara guardar a instância do cliente MQTT
 export const connectMQTT = (onMessageRecived) => {
 
     //Usar wss na porta 8884
-    client = new Client('broker.hivemq.com', 8884, 'clientId-', '/mqtt', 'reactClient' + Math.random());
+    client = new Client('broker.hivemq.com', 8884, '/mqtt', 'reactClient' + Math.random());
 
     //define o handler para perda de conexão
     client.onConnectionlOst = (responseObject) => {
